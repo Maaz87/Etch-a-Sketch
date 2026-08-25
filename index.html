@@ -4,82 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch a Sketch</title>
-    <style>
-      #container {
-        width: 960px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0;
-      }
-      .square {
-        box-sizing: border-box;
-        border: 1px solid black;
-      }
-    </style>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <p id="status-message">Choose a grid size between 1 and 100.</p>
     <div id="container"></div>
 
-    <script>
-      const cont = document.querySelector("#container");
-      const statusMessage = document.querySelector("#status-message");
-
-      const btn = document.createElement("button");
-      btn.textContent = "Create New Grid";
-      btn.style.backgroundColor = "yellow";
-      btn.style.margin = "10px";
-      btn.style.padding = "20px";
-      btn.style.borderRadius = "10px";
-      btn.style.alignSelf = "center";
-      cont.before(btn);
-
-      function sketchMaker(value) {
-        cont.innerHTML = "";
-
-        let size = 960 / value;
-        for (let i = 1; i <= value; i++) {
-          for (let j = 1; j <= value; j++) {
-            const sq_div = document.createElement("div");
-            sq_div.classList.add("square");
-            sq_div.style.height = `${size}px`;
-            sq_div.style.width = `${size}px`;
-            sq_div.style.backgroundColor = `rgb(${Math.random() * (255 - 0) + 0}, ${Math.random() * (255 - 0) + 0}, ${Math.random() * (255 - 0) + 0} )`;
-
-            sq_div.addEventListener("mouseover", () => {
-              let interactions = parseInt(sq_div.dataset.interactions);
-
-              if (interactions < 10) {
-                interactions++;
-                sq_div.dataset.interactions = interactions;
-                sq_div.style.backgroundColor = `rgb(${Math.random() * (255 - 0) + 0}, ${Math.random() * (255 - 0) + 0}, ${Math.random() * (255 - 0) + 0} )`;
-                let brightnessPercentage = 100 - interactions * 10;
-                sq_div.style.filter = `brightness(${brightnessPercentage}%)`;
-              }
-            });
-
-            cont.appendChild(sq_div);
-          }
-        }
-
-        statusMessage.textContent = `Grid updated to ${value} x ${value}.`;
-      }
-
-      sketchMaker(16);
-
-      btn.addEventListener("click", () => {
-        let val = prompt(
-          "Enter NxN valueS (maximum value should not be greater than 100):",
-          16,
-        );
-        let num = Number(val);
-        if (num > 100 || num <= 0 || Number.isNaN(num)) {
-          statusMessage.textContent = "Please enter a valid number between 1 and 100.";
-          alert("Wrong Input Please Enter Correct input");
-        } else {
-          sketchMaker(num);
-        }
-      });
-    </script>
+    
   </body>
 </html>
