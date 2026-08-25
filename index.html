@@ -23,8 +23,6 @@
 
     <script>
       const cont = document.querySelector("#container");
-      const statusMessage = document.querySelector("#status-message
-      const cont = document.querySelector("#container");
       const statusMessage = document.querySelector("#status-message");
 
       const btn = document.createElement("button");
@@ -46,6 +44,7 @@
             sq_div.classList.add("square");
             sq_div.style.height = `${size}px`;
             sq_div.style.width = `${size}px`;
+            sq_div.style.backgroundColor = `rgb(${Math.random() * (255 - 0) + 0}, ${Math.random() * (255 - 0) + 0}, ${Math.random() * (255 - 0) + 0} )`;
 
             sq_div.addEventListener("mouseover", () => {
               let interactions = parseInt(sq_div.dataset.interactions);
@@ -77,9 +76,6 @@
         if (num > 100 || num <= 0 || Number.isNaN(num)) {
           statusMessage.textContent = "Please enter a valid number between 1 and 100.";
           alert("Wrong Input Please Enter Correct input");
-        } else {
-          sketchMaker(num);
-        }ase Enter Correct input");
         } else {
           sketchMaker(num);
         }
