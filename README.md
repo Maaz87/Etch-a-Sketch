@@ -1,46 +1,50 @@
 # Etch-a-Sketch
 
-A browser-based drawing app inspired by the classic Etch-A-Sketch toy. The project creates a flexible square grid, lets the user draw by hovering across cells, and supports generating a new sketch pad with a custom number of squares per side while keeping the total board area consistent.
+A small browser-based drawing project inspired by the classic Etch-A-Sketch. The page creates a grid of square cells, lets the user draw by moving the mouse over them, and allows a new grid size to be generated through a prompt.
+
+## Current Implementation
+
+- Loads a default 16x16 grid when the page opens
+- Creates the squares dynamically with JavaScript
+- Uses a fixed 960px container width for the board
+- Calculates square size as 960 divided by the selected value
+- Adds a button labeled Create New Grid
+- Prompts the user to enter a new grid size value
+- Clears the old grid and rebuilds a new one
+- Applies random RGB colors to each square on hover
+- Adds a progressive darkening effect with up to 10 interactions per square
+- Displays status text so the user knows the current grid size and validation state
 
 ## Features
 
-- Default 16x16 grid created dynamically with JavaScript
-- Flexbox-based layout for the drawing board
-- Hover interaction that colors grid cells as the mouse passes over them
-- Button to prompt for a new grid size up to 100 squares per side
-- Rebuilds the grid while keeping the same overall canvas dimensions
-- Responsive square sizing based on the chosen grid size
+- Dynamic grid generation
+- Flexbox-based layout
+- Hover interaction for drawing
+- User-driven grid resizing through a prompt
+- Consistent total board width across different grid sizes
+- Randomized square colors and darkening effect
+- Status message feedback during updates
 
 ## How to Run
 
-1. Open the project folder in a browser.
-2. Load the `index.html` file.
-3. Move the mouse over the grid to draw.
-4. Click the button to enter a new size and generate a fresh sketch pad.
+1. Open the project in a browser.
+2. Load the HTML file directly.
+3. Hover over the grid squares to draw.
+4. Click the Create New Grid button.
+5. Enter a value between 1 and 100 to generate a new grid size.
 
-## Project Requirements Covered
+## Notes
 
-This project follows the Odin Project Etch-a-Sketch assignment and includes:
-
-- Creating a 16x16 grid using JavaScript
-- Using Flexbox to arrange the squares in rows and columns
-- Adding a hover effect to change square color
-- Creating a button that asks for a new grid size
-- Maintaining the same total canvas width while resizing the grid
-- Limiting the maximum user input to 100
-
-## Extra Credit
-
-Potential enhancements include:
-
-- Random RGB color generation for each hover interaction
-- Progressive darkening so each pass makes a square 10% darker until it becomes fully black or fully colored
+- The project currently uses a 960px board width.
+- Square size is calculated using the formula 960 divided by the number of squares per side.
+- The hover effect uses random RGB values and darkens the square by 10% for each interaction up to 10 times.
+- The page includes a visible status message to guide the user during grid updates.
 
 ## Files
 
-- `index.html` — HTML structure, styling, and JavaScript logic
-- `README.md` — project overview and instructions
+- index.html — page structure, styling, and JavaScript logic
+- README.md — project overview and instructions
 
 ## License
 
-This project is for educational purposes as part of The Odin Project curriculum.
+This project is intended for educational use as part of the Odin Project curriculum.
