@@ -1,6 +1,14 @@
-# Etch-a-Sketch
+﻿# Etch-a-Sketch
 
 A small browser-based drawing project inspired by the classic Etch-A-Sketch. The page creates a grid of square cells, lets the user draw by moving the mouse over them, and allows a new grid size to be generated through a prompt.
+
+## Current Structure
+
+This project is organized into separate files:
+
+- index.html — page markup and the app container
+- style.css — board sizing and square styling
+- script.js — grid generation, button behavior, and hover interactions
 
 ## Current Implementation
 
@@ -13,7 +21,6 @@ A small browser-based drawing project inspired by the classic Etch-A-Sketch. The
 - Clears the old grid and rebuilds a new one
 - Applies random RGB colors to each square on hover
 - Adds a progressive darkening effect with up to 10 interactions per square
-- Displays status text so the user knows the current grid size and validation state
 
 ## Features
 
@@ -23,7 +30,6 @@ A small browser-based drawing project inspired by the classic Etch-A-Sketch. The
 - User-driven grid resizing through a prompt
 - Consistent total board width across different grid sizes
 - Randomized square colors and darkening effect
-- Status message feedback during updates
 
 ## How to Run
 
@@ -38,11 +44,12 @@ A small browser-based drawing project inspired by the classic Etch-A-Sketch. The
 - The project currently uses a 960px board width.
 - Square size is calculated using the formula 960 divided by the number of squares per side.
 - The hover effect uses random RGB values and darkens the square by 10% for each interaction up to 10 times.
-- The page includes a visible status message to guide the user during grid updates.
 
 ## Files
 
-- index.html — page structure, styling, and JavaScript logic
+- index.html — page structure
+- style.css — layout and styling
+- script.js — dynamic grid logic and interactions
 - README.md — project overview and instructions
 
 ## License
