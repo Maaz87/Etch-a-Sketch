@@ -1,45 +1,45 @@
 # Etch-a-Sketch
 
-A browser-based pixel drawing app inspired by the classic Etch-A-Sketch toy. This project lets users create a grid of squares, hover over cells to sketch, and generate a new grid with a custom size while keeping the same total canvas area.
+A browser-based drawing app inspired by the classic Etch-A-Sketch toy. The project creates a flexible square grid, lets the user draw by hovering across cells, and supports generating a new sketch pad with a custom number of squares per side while keeping the total board area consistent.
 
 ## Features
 
-- 16x16 default grid created dynamically with JavaScript
+- Default 16x16 grid created dynamically with JavaScript
 - Flexbox-based layout for the drawing board
-- Hover effect that colors cells as the mouse passes over them
+- Hover interaction that colors grid cells as the mouse passes over them
 - Button to prompt for a new grid size up to 100 squares per side
-- Rebuilds the grid without changing the overall canvas size
-- Optional extra credit: random RGB color generation and progressive darkening
+- Rebuilds the grid while keeping the same overall canvas dimensions
+- Responsive square sizing based on the chosen grid size
 
 ## How to Run
 
-1. Open the project folder in your browser.
-2. Load `index.html` in a browser.
-3. Move your mouse over the grid to draw.
-4. Click the button at the top to enter a new square count and create a fresh sketch pad.
+1. Open the project folder in a browser.
+2. Load the `index.html` file.
+3. Move the mouse over the grid to draw.
+4. Click the button to enter a new size and generate a fresh sketch pad.
 
-## Project Requirements
+## Project Requirements Covered
 
-This project follows the Odin Project Etch-a-Sketch assignment:
+This project follows the Odin Project Etch-a-Sketch assignment and includes:
 
-- Create a 16x16 grid of square divs using JavaScript
-- Use Flexbox to display the grid
-- Make each square change color on hover
-- Add a button that asks for a new grid size and regenerates the board
-- Keep the total canvas width constant while resizing the grid
-- Limit the maximum grid size to 100
+- Creating a 16x16 grid using JavaScript
+- Using Flexbox to arrange the squares in rows and columns
+- Adding a hover effect to change square color
+- Creating a button that asks for a new grid size
+- Maintaining the same total canvas width while resizing the grid
+- Limiting the maximum user input to 100
 
 ## Extra Credit
 
-The app can be extended with:
+Potential enhancements include:
 
-- Random RGB coloring on every hover interaction
-- Progressive darkening so each pass makes a square darker by 10% until it becomes fully black or fully colored
+- Random RGB color generation for each hover interaction
+- Progressive darkening so each pass makes a square 10% darker until it becomes fully black or fully colored
 
 ## Files
 
-- `index.html` — page structure and JavaScript logic
-- `README.md` — project overview and usage information
+- `index.html` — HTML structure, styling, and JavaScript logic
+- `README.md` — project overview and instructions
 
 ## License
 
